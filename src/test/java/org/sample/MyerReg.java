@@ -2,6 +2,8 @@ package org.sample;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Scanner;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -44,6 +46,13 @@ public class MyerReg {
 		 File pass = tk.getScreenshotAs(OutputType.FILE);
 		File f=new File("C:\\Users\\Admin\\eclipse-workspace\\screenshot2023\\src\\test\\java\\org\\sample\\passscreen.java\\Passtxt");
 		FileUtils.copyFile(pass, f);
+		Scanner s = new Scanner(System.in);
+	
+		String s1 = s.nextLine();
+		File screenshotAs = tk.getScreenshotAs(OutputType.FILE);
+		
+		File f2=new File("C:\\Users\\Admin\\eclipse-workspace\\screenshot2023\\src\\test\\java\\org\\sample\\passscreen.java\\Passtxt"+s1);
+		
 		
 
 	}
